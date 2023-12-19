@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+#myDIV {
+  background-color: coral;
+  padding: 16px;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The removeEventListener() Method</h2>
+
+<div id="myDIV">This orange element has an onmousemove event handler that displays a random number when you move the mouse inside.
+  <p>Click "Remove" to remove the event handler.</p>
+  <button onclick="removeHandler()">Remove</button>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const myDiv = document.getElementById("myDIV");
+myDiv.addEventListener("mousemove", myFunction);
+
+function removeHandler() {
+  myDiv.removeEventListener("mousemove", myFunction);
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+</script>
+<!-- //insert before function -->
+<ul id="myList">
+    <li>Coffee</li>
+    <li>Tea</li>
+  </ul>
+  
+  <script>
+  // Create a "li" element:
+  const newNode = document.createElement("li");
+  // Create a text node:
+  const textNode = document.createTextNode("Water");
+  // Append text node to "li" element:
+  newNode.appendChild(textNode);
+  
+  // Insert before existing child:
+  const list = document.getElementById("myList");
+  list.insertBefore(newNode, list.children[0]);
+  </script>
+  <script>
+    function supermarket(prices, n, k) {
+  // write code here
+  // do not console.log the answer
+  // return sorted array
+	prices.sort();
+	console.log(prices)
+
+	let sum=0;
+	let a=0;
+	for(let i=0;i<n;i++){
+	console.log("call")
+
+		let b=0;
+		if(a===k && b<=k){
+			sum+=prices[i]
+			console.log(sum)
+			b=b++;
+		}
+		else{
+			a++;
+		console.log(a)
+
+			
+		}
+		
+	}
+	// let sum=prices[2]+prices[3]
+	return sum;
+
+  }
+
+var readline = require("readline").createInterface(process.stdin);
+
+let inputArr = [];
+var lineNumber = -1;
+var A;
+var B;
+readline.on("line", readInputs);
+
+function readInputs(line) {
+  inputArr.push(line);
+  lineNumber++;
+  if (lineNumber == 0) {
+    [A, B] = inputArr[0].split(" ").map((x) => parseInt(x));
+  }
+
+  if (lineNumber === 1) {
+    logic("s");
+    readline.close();
+  }
+}
+
+function logic(input) {
+  //inputArr.shift();
+  const n = A;
+  const k = B;
+  const prices=inputArr[1].split(" ").map(x=>parseInt(x));
+  console.log(supermarket(prices,n,k))
+  
+}
+
+
+
+  </script>
+
+</body>
+</html>
+
+

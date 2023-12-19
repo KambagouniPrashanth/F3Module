@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    color: white;
+    background-color: #2F2699;
+    
+    font-size: 1.2rem;
+    gap: 2rem;
+    position: relative;
+    top: 4rem;
+    left: 20rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+
+}
+.form-container input{
+    font-size: 1.2rem;
+}
+.form-container #submit-btn{
+    
+    
+    font-size: 1.2rem;
+    background-color: #59CE72;
+    color: #fff;
+
+}
+.chatroom-container{
+    display: flex;
+    padding: 0.5rem;
+    width: 90vw;
+    height: 100vh;
+    
+}
+.chat-header{
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+
+}
+.message{
+    display: flex;
+    flex-direction: column;
+}
+.message .sent{
+    padding:0.5rem 0.5rem;
+    font-size: 1.2rem;
+    background-color: #35897E;
+    color: white;
+    align-self: flex-end;
+    width: fit-content;
+    
+}
+
+.message .receive{
+    padding:0.5rem 0.1rem;
+    font-size: 1.2rem;
+    align-self: flex-start;
+    background-color: #59CE72;
+    color: white;
+    width: fit-content;
+    
+}
+.chatting{
+    display: none;
+    justify-content: space-between;
+}
+
+
+.chatroom-container{
+    display: none;
+}
